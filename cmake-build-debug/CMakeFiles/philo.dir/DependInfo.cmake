@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/jlucile/Desktop/philo/src/philo.c" "/Users/jlucile/Desktop/philo/cmake-build-debug/CMakeFiles/philo.dir/src/philo.c.o"
+  "/Users/jlucile/Desktop/philo/src/philo_main.c" "/Users/jlucile/Desktop/philo/cmake-build-debug/CMakeFiles/philo.dir/src/philo_main.c.o"
   "/Users/jlucile/Desktop/philo/src/utils.c" "/Users/jlucile/Desktop/philo/cmake-build-debug/CMakeFiles/philo.dir/src/utils.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")

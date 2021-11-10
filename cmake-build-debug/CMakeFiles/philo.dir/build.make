@@ -79,29 +79,29 @@ CMakeFiles/philo.dir/src/utils.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philo.dir/src/utils.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jlucile/Desktop/philo/src/utils.c -o CMakeFiles/philo.dir/src/utils.c.s
 
-CMakeFiles/philo.dir/src/philo.c.o: CMakeFiles/philo.dir/flags.make
-CMakeFiles/philo.dir/src/philo.c.o: ../src/philo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jlucile/Desktop/philo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/philo.dir/src/philo.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philo.dir/src/philo.c.o -c /Users/jlucile/Desktop/philo/src/philo.c
+CMakeFiles/philo.dir/src/philo_main.c.o: CMakeFiles/philo.dir/flags.make
+CMakeFiles/philo.dir/src/philo_main.c.o: ../src/philo_main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jlucile/Desktop/philo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/philo.dir/src/philo_main.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/philo.dir/src/philo_main.c.o -c /Users/jlucile/Desktop/philo/src/philo_main.c
 
-CMakeFiles/philo.dir/src/philo.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/philo.dir/src/philo.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jlucile/Desktop/philo/src/philo.c > CMakeFiles/philo.dir/src/philo.c.i
+CMakeFiles/philo.dir/src/philo_main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/philo.dir/src/philo_main.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/jlucile/Desktop/philo/src/philo_main.c > CMakeFiles/philo.dir/src/philo_main.c.i
 
-CMakeFiles/philo.dir/src/philo.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philo.dir/src/philo.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jlucile/Desktop/philo/src/philo.c -o CMakeFiles/philo.dir/src/philo.c.s
+CMakeFiles/philo.dir/src/philo_main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/philo.dir/src/philo_main.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/jlucile/Desktop/philo/src/philo_main.c -o CMakeFiles/philo.dir/src/philo_main.c.s
 
 # Object files for target philo
 philo_OBJECTS = \
 "CMakeFiles/philo.dir/src/utils.c.o" \
-"CMakeFiles/philo.dir/src/philo.c.o"
+"CMakeFiles/philo.dir/src/philo_main.c.o"
 
 # External object files for target philo
 philo_EXTERNAL_OBJECTS =
 
 philo: CMakeFiles/philo.dir/src/utils.c.o
-philo: CMakeFiles/philo.dir/src/philo.c.o
+philo: CMakeFiles/philo.dir/src/philo_main.c.o
 philo: CMakeFiles/philo.dir/build.make
 philo: CMakeFiles/philo.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jlucile/Desktop/philo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable philo"

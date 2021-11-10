@@ -1,11 +1,11 @@
 NAME	= philo
-CC		= gcc
 FLAGS	= -Wall -Werror -Wextra -g
+CC		= gcc
 
 INC		= -I philosophers.h
 
 SRC_DIR	= src/
-SRC_LST	= main.c utils.c
+SRC_LST	= philo.c utils.c
 
 OBJ_DIR	= obj/
 OBJ_LST	= $(SRC_LST:.c=.o)

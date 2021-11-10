@@ -129,29 +129,29 @@ philo/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo.dir/build.make CMakeFiles/philo.dir/build
 .PHONY : philo/fast
 
-src/philo.o: src/philo.c.o
-.PHONY : src/philo.o
+src/philo_main.o: src/philo_main.c.o
+.PHONY : src/philo_main.o
 
 # target to build an object file
-src/philo.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo.dir/build.make CMakeFiles/philo.dir/src/philo.c.o
-.PHONY : src/philo.c.o
+src/philo_main.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo.dir/build.make CMakeFiles/philo.dir/src/philo_main.c.o
+.PHONY : src/philo_main.c.o
 
-src/philo.i: src/philo.c.i
-.PHONY : src/philo.i
+src/philo_main.i: src/philo_main.c.i
+.PHONY : src/philo_main.i
 
 # target to preprocess a source file
-src/philo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo.dir/build.make CMakeFiles/philo.dir/src/philo.c.i
-.PHONY : src/philo.c.i
+src/philo_main.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo.dir/build.make CMakeFiles/philo.dir/src/philo_main.c.i
+.PHONY : src/philo_main.c.i
 
-src/philo.s: src/philo.c.s
-.PHONY : src/philo.s
+src/philo_main.s: src/philo_main.c.s
+.PHONY : src/philo_main.s
 
 # target to generate assembly for a file
-src/philo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo.dir/build.make CMakeFiles/philo.dir/src/philo.c.s
-.PHONY : src/philo.c.s
+src/philo_main.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philo.dir/build.make CMakeFiles/philo.dir/src/philo_main.c.s
+.PHONY : src/philo_main.c.s
 
 src/utils.o: src/utils.c.o
 .PHONY : src/utils.o
@@ -186,9 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... philo"
-	@echo "... src/philo.o"
-	@echo "... src/philo.i"
-	@echo "... src/philo.s"
+	@echo "... src/philo_main.o"
+	@echo "... src/philo_main.i"
+	@echo "... src/philo_main.s"
 	@echo "... src/utils.o"
 	@echo "... src/utils.i"
 	@echo "... src/utils.s"

@@ -78,7 +78,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/jlucile/Desktop/philo/src/philo.c">
+		<Unit filename="/Users/jlucile/Desktop/philo/src/philo_main.c">
 			<Option target="philo"/>
 		</Unit>
 		<Unit filename="/Users/jlucile/Desktop/philo/src/utils.c">
