@@ -1,4 +1,4 @@
-#include "../philosophers.h"
+#include "../includes/philosophers.h"
 
 int	ft_perror(int err)
 {

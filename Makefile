@@ -1,35 +1,45 @@
-NAME	= philo
-FLAGS	= -Wall -Werror -Wextra -g
-CC		= gcc
+NAME = philo
 
-INC		= -I philosophers.h
+SRC_LST = philo_main.c utils.c
+SRC_DIR = src
+SRC = $(addprefix $(SRC_DIR)/, $(SRC_LST))
 
-SRC_DIR	= src/
-SRC_LST	= philo.c utils.c
+HEADER_LST = philosophers.h
+HEADER_DIR = includes
+HEADER = $(addprefix $(HEADER_DIR)/, $(HEADER_LST))
 
-OBJ_DIR	= obj/
-OBJ_LST	= $(SRC_LST:.c=.o)
-OBJ		= $(addprefix $(OBJ_DIR),$(OBJ_LST))
+OBJ_LST = $(patsubst %.c, %.o, $(SRC_LST))
+OBJ_DIR = obj
+OBJ = $(addprefix $(OBJ_DIR)/, $(OBJ_LST))
 
-all:	$(NAME)
+CC = gcc
 
-$(NAME):	$(OBJ) philosophers.h
-	@$(CC) -o $(NAME) $(OBJ)
-	@echo "##### philosophers compiling finished! #####"
+FLAGS = -Wall -Werror -Wextra -g
 
-$(OBJ_DIR)%.o:	$(SRC_DIR)%.c
+RM = rm -rf
+
+GREEN = \033[0;32m
+RESET = \033[0m
+
+all: $(NAME)
+
+$(NAME): $(OBJ) $(HEADER)
+	@echo "$(GREEN) objects were created $(RESET)"
+	@$(CC) -lpthread $(FLAGS) $(OBJ) -o $@ -I $(HEADER_DIR)
+	@echo "$(GREEN) philo - [ok] $(RESET)"
+
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	@mkdir -p $(OBJ_DIR)
-	@echo "##### Creating" [ $@ ] " #####"
-	@$(CC) $(FLAGS) -o $< -c $< $(INC)
+	@$(CC) $(FLAGS) -c $< -o $@ -I $(HEADER_DIR)
 
 clean:
-	@rm -f $(OBJ)
-	@echo "##### Removed object files #####"
+	@$(RM) $(OBJ_DIR)
+	@echo "$(GREEN) objects were deleted $(RESET)"
 
-fclean:	clean
-	@rm -f $(NAME)
-	@echo "##### Removed binary files #####"
+fclean: clean
+	@$(RM) $(NAME)
+	@echo "$(GREEN) objects and $(NAME) were deleted $(RESET)"
 
-re:			fclean all
+re: fclean all
 
-.PHONY:		all clean fclean re
+.PHONY: all clean fclean re

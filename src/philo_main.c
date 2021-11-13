@@ -1,4 +1,4 @@
-#include "../philosophers.h"
+#include "../includes/philosophers.h"
 
 int	init_philo(t_param *params)
 {
@@ -80,6 +80,14 @@ int	get_params(int argc, char **argv, t_param *params)
 	return (check_params(params, argc));
 }
 
+int	simulate(t_param *params)
+{
+	int i;
+
+	i = 0;
+	gettimeofday()
+}
+
 int	main(int argc, char **argv)
 {
 	t_param		params;
@@ -89,6 +97,8 @@ int	main(int argc, char **argv)
 	if (init_mutex(&params))
 		return (1);
 	if (init_philo(&params))
+		return (1);
+	if (simulate(&params))
 		return (1);
 	return (0);
 }

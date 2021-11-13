@@ -1,5 +1,5 @@
-#ifndef PHILO_PHILOSOPHERS_H
-# define PHILO_PHILOSOPHERS_H
+#ifndef PHILOSOPHERS_H
+# define PHILOSOPHERS_H
 
 # include <unistd.h>
 # include <stdio.h>
@@ -28,6 +28,7 @@ typedef struct s_param
 	int 			time_to_sleep;
 	int 			num_of_eat;
 	int 			is_dead;
+	long 			start_time;
 	pthread_mutex_t *forks;
 	pthread_mutex_t eating;
 	pthread_mutex_t printing;
