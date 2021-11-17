@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   utils.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlucile <jlucile@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/17 16:58:11 by jlucile           #+#    #+#             */
+/*   Updated: 2021/11/17 16:58:12 by jlucile          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/philosophers.h"
 
 int	ft_perror(int err)
@@ -7,7 +19,7 @@ int	ft_perror(int err)
 	else if (err == 2)
 		printf("Mutex error\n");
 	else if (err == 3)
-		printf("Error during creating thred\n");
+		printf("Error during creating thread\n");
 	return (1);
 }
 

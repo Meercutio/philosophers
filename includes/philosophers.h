@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   philosophers.h                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jlucile <jlucile@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/17 16:58:18 by jlucile           #+#    #+#             */
+/*   Updated: 2021/11/17 16:58:19 by jlucile          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PHILOSOPHERS_H
 # define PHILOSOPHERS_H
 
@@ -13,7 +25,7 @@ typedef struct s_philoshpher
 {
 	int 			id;
 	int 			meals_count;
-	int 			last_meal;
+	long 			last_meal;
 	pthread_mutex_t *left;
 	pthread_mutex_t *right;
 	pthread_t 		thread_philo;
@@ -35,7 +47,15 @@ typedef struct s_param
 	t_philosopher	*philosophers;
 }		t_param;
 
-int	ft_atoi(const char *str);
-int	ft_perror(int err);
+int		ft_atoi(const char *str);
+int		ft_perror(int err);
+long	get_time();
+int		get_params(int argc, char **argv, t_param *params);
+int 	init_mutex(t_param *param);
+int		init_philo(t_param *params);
+void	print_activ(int id, t_param *param, char *str);
+void	print_death(int id, t_param *param, char *str);
+void	steward(t_param *params);
+void	check_num_of_eat(t_param *params);
 
 #endif

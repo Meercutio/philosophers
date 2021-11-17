@@ -1,6 +1,6 @@
 NAME = philo
 
-SRC_LST = philo_main.c utils.c
+SRC_LST = philo_main.c utils.c init.c timenprint.c steward.c
 SRC_DIR = src
 SRC = $(addprefix $(SRC_DIR)/, $(SRC_LST))
 
@@ -34,11 +34,11 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 
 clean:
 	@$(RM) $(OBJ_DIR)
-	@echo "$(GREEN) objects were deleted $(RESET)"
+	@echo "$(GREEN) objects deleted $(RESET)"
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "$(GREEN) objects and $(NAME) were deleted $(RESET)"
+	@echo "$(GREEN) $(NAME) deleted $(RESET)"
 
 re: fclean all
 
