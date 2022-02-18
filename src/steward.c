@@ -21,7 +21,7 @@ void	check_num_of_eat(t_param *params)
 	ct = 0;
 	while (i < params->num_of_philo)
 	{
-		if (params->philosophers->meals_count >= params->num_of_eat)
+		if (params->philosophers->meals_count > params->num_of_eat)
 			ct++;
 		i++;
 	}

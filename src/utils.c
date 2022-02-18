@@ -12,6 +12,14 @@
 
 #include "../includes/philosophers.h"
 
+int	ft_isdigit(int c)
+{
+	if (c >= '0' && c <= '9')
+		return (1);
+	else
+		return (0);
+}
+
 int	ft_perror(int err)
 {
 	if (err == 1)
@@ -64,4 +72,27 @@ int	ft_atoi(const char *str)
 		i++;
 	res = to_int(str, i, sign);
 	return ((int)res);
+}
+
+int	check_value(int argc, char **argv)
+{
+	int	i;
+	int	j;
+
+	i = 1;
+	while (i < argc)
+	{
+		j = 0;
+		while (argv[i][j] != '\0')
+		{
+			if (!(ft_isdigit(argv[i][j])))
+			{
+				printf("Wot eto ti chort konechno!!!\n");
+				return (1);
+			}
+			j++;
+		}
+		i++;
+	}
+	return (0);
 }

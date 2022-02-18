@@ -92,6 +92,8 @@ int	main(int argc, char **argv)
 {
 	t_param		params;
 
+	if (check_value(argc, argv))
+		return (1);
 	if (get_params(argc, argv, &params))
 		return (1);
 	if (init_mutex(&params))
